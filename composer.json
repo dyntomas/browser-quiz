@@ -1,0 +1,19 @@
+{
+  "name": "dyntomas/browser-quiz",
+  "tags": [
+    "webapp",
+    "quiz",
+    "internet"
+  ],
+  "description": "A group game of guessing popular web browsers that people use to access the internet",
+  "type": "project",
+  "license": "GPL-2.0-only",
+  "minimum-stability": "stable",
+  "authors": [
+    {
+      "name": "TriHydera",
+      "homepage": "https://browserquiz.dyntomas.com/",
+      "role": "Developer"
+    }
+  ]
+}
