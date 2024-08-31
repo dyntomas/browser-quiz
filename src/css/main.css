@@ -1,0 +1,115 @@
+body {
+    background: #28a1b0;
+    background: linear-gradient(180deg, rgba(40, 161, 176, 1) 0, rgba(29, 185, 185, 1) 30%, rgba(110, 221, 222, 1) 40%, rgba(24, 208, 211, 1) 50%, rgba(110, 221, 222, 1) 60%, rgba(29, 185, 185, 1) 70%, rgba(40, 161, 176, 1) 100%);
+    margin: 0;
+    min-height: 100vh
+}
+
+footer,
+header {
+    text-align: center;
+    background: #2322c9;
+    background: linear-gradient(0deg, #2322c9 0, #8040d4 20%, #5d41a9 50%, #8040d4 80%, #2322c9 100%);
+    color: #fff
+}
+
+header {
+    padding: 2px
+}
+
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%
+}
+
+a i {
+    float: left
+}
+
+button,
+h1,
+h2 {
+    font-family: calibri, "Trebuchet MS", sans-serif;
+    color: azure
+}
+
+button {
+    font-size: 30px;
+    width: 90%;
+    max-width: 500px;
+    margin-bottom: 10px;
+    animation: size 2s;
+    border-radius: 12px
+}
+
+button:hover {
+    rotate: 1.5deg;
+    padding: 12px
+}
+
+a {
+    text-decoration: none
+}
+
+.bg-green {
+    background: rgb(31, 165, 50);
+    background: linear-gradient(180deg, rgba(31, 165, 50, 1) 0%, rgba(60, 197, 104, 1) 30%, rgba(120, 213, 148, 1) 50%, rgba(60, 197, 104, 1) 70%, rgba(31, 165, 50, 1) 100%);
+    color: white
+}
+
+.padding {
+    padding-top: 16px !important;
+    padding-bottom: 16px !important
+}
+
+#content {
+    padding: 0 30%
+}
+
+#image {
+    height: 370px;
+    width: auto
+}
+
+@keyframes size {
+    0% {
+        width: 60%
+    }
+
+    100% {
+        width: 90%
+    }
+}
+
+@media only screen and (max-width:600px) {
+    .padding {
+        padding: 8px
+    }
+
+    #image {
+        height: 300px;
+        width: auto
+    }
+
+    #content {
+        padding: 0
+    }
+
+    h1 {
+        font-size: 30px
+    }
+
+    h3 {
+        font-size: 20px
+    }
+
+    button {
+        font-size: 25px
+    }
+
+    button:hover {
+        padding: 9px
+    }
+}
