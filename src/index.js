@@ -1,5 +1,10 @@
-import './css/w3.css'
-import './css/main.css'
-import './js/quiz';
+require('w3-css/w3.css'); 
+require('@fortawesome/fontawesome-free/css/fontawesome.min.css');
+require('@fortawesome/fontawesome-free/css/solid.min.css');
+require('./css/style.css');
 
-import 'cash-dom/dist/cash.esm';
+const { app } = require( './js/app');
+const sw = require('./js/sw-reg');
+
+app();
+sw();

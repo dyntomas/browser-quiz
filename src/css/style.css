@@ -1,6 +1,6 @@
 body {
-    background: #28a1b0;
-    background: linear-gradient(180deg, rgba(40, 161, 176, 1) 0, rgba(29, 185, 185, 1) 30%, rgba(110, 221, 222, 1) 40%, rgba(24, 208, 211, 1) 50%, rgba(110, 221, 222, 1) 60%, rgba(29, 185, 185, 1) 70%, rgba(40, 161, 176, 1) 100%);
+    background: rgb(34, 193, 195);
+    background: linear-gradient(90deg, rgba(34, 193, 195, 1) 0%, rgba(105, 165, 80, 1) 30%, rgba(190, 119, 149, 1) 50%, rgba(105, 165, 102, 1) 70%, rgba(34, 193, 195, 1) 100%);
     margin: 0;
     min-height: 100vh
 }
@@ -38,7 +38,7 @@ h2 {
 button {
     font-size: 30px;
     width: 90%;
-    max-width: 500px;
+    max-width: 600px;
     margin-bottom: 10px;
     animation: size 2s;
     border-radius: 12px
@@ -53,12 +53,6 @@ a {
     text-decoration: none
 }
 
-.bg-green {
-    background: rgb(31, 165, 50);
-    background: linear-gradient(180deg, rgba(31, 165, 50, 1) 0%, rgba(60, 197, 104, 1) 30%, rgba(120, 213, 148, 1) 50%, rgba(60, 197, 104, 1) 70%, rgba(31, 165, 50, 1) 100%);
-    color: white
-}
-
 .padding {
     padding-top: 16px !important;
     padding-bottom: 16px !important
@@ -68,9 +62,15 @@ a {
     padding: 0 30%
 }
 
-#image {
-    height: 370px;
-    width: auto
+img.logo {
+    width: 100%;
+    max-width: 1000px;
+    margin-bottom: 20px;
+}
+
+img.main {
+    width: 80%;
+    height: auto;
 }
 
 @keyframes size {
@@ -88,7 +88,7 @@ a {
         padding: 8px
     }
 
-    #image {
+    img.main {
         height: 300px;
         width: auto
     }
@@ -99,10 +99,6 @@ a {
 
     h1 {
         font-size: 30px
-    }
-
-    h3 {
-        font-size: 20px
     }
 
     button {
