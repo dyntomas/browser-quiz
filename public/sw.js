@@ -67,26 +67,16 @@ if (!self.define) {
     });
   };
 }
-define(['./workbox-c86a559d'], (function (workbox) { 'use strict';
+define(['./workbox-d7caa54c'], (function (workbox) { 'use strict';
 
-  self.skipWaiting();
-
-  /**
-   * The precacheAndRoute() method efficiently caches and responds to
-   * requests for URLs in the manifest.
-   * See https://goo.gl/S9QRab
-   */
-  workbox.precacheAndRoute([{
-    "url": "c87b741aef4e7aae5a32.json",
-    "revision": null
-  }], {});
-  workbox.registerRoute(/https:\/\/demo|.cdn.dymtomas.com\/*/, new workbox.NetworkFirst({
-    "cacheName": "cdn-cache",
-    plugins: []
-  }), 'GET');
-  workbox.registerRoute(/\/*/, new workbox.NetworkFirst({
-    "cacheName": "app-1.1-rc1",
-    plugins: []
-  }), 'GET');
+	self.skipWaiting();
+	workbox.registerRoute(/https:\/\/demo|.cdn.dymtomas.com\/*/, new workbox.NetworkFirst({
+	  "cacheName": "cdn-cache",
+	  plugins: []
+	}), 'GET');
+	workbox.registerRoute(/\/*/, new workbox.NetworkFirst({
+	  "cacheName": "app-1.1-rc1",
+	  plugins: []
+	}), 'GET');
 
 }));

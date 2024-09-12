@@ -5,6 +5,8 @@ const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");;
 const { PurgeCSSPlugin } = require("purgecss-webpack-plugin");
 const { GenerateSW } = require('workbox-webpack-plugin');
 const FileManagerPlugin = require('filemanager-webpack-plugin');
+const TerserPlugin = require("terser-webpack-plugin");
+
 
 const { version } = require('./package.json');
 
@@ -16,7 +18,6 @@ const config = {
     },
     module: {
         rules: [
-            { test: /\.json$/i, type: "asset/resource" },
             {
                 test: /\.js$/,
                 use: 'babel-loader',
@@ -41,7 +42,7 @@ const config = {
         new PurgeCSSPlugin({
             paths: glob.sync(`${path.resolve(__dirname, 'public')}/*`, { nodir: true }),
         }),
-        new GenerateSW({
+        /* new GenerateSW({
             swDest: "sw.js",
             runtimeCaching: [{
                 handler: "NetworkFirst",
@@ -58,7 +59,7 @@ const config = {
             }],
             exclude: ["main.js", "main.css"],
             skipWaiting: true
-        }),
+        }), */
         new FileManagerPlugin({
             events: {
                 onEnd: {
@@ -83,8 +84,14 @@ const config = {
                 }
             }
         }),
-        new FileManagerPlugin({
+new FileManagerPlugin({
             events: {
+                 onStart: {
+                    delete: [
+                        path.resolve(__dirname, "public/assets/js/main.js"),
+                        path.resolve(__dirname, "public/assets/css/main.css")
+                    ]
+                },
                 onEnd: {
                     delete: [
                         path.resolve(__dirname, "public/main.js"),
@@ -95,9 +102,10 @@ const config = {
         })
     ],
     optimization: {
-        usedExports: false,
+        usedExports: true,
         minimizer: [
-            new CssMinimizerPlugin()
+            new CssMinimizerPlugin(),
+            new TerserPlugin()
         ]
     }
 };
