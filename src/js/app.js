@@ -7,34 +7,40 @@ fetchJSON("assets/data/browsers-db.json", data => {
     $("#loading").hide();
     $("#playable").show();
 
+    const mainimg = $("#0");
+    const preload = $("#1");
+    const mainh3 = $("#2");
+    const btn1 = $("#3");
+    const btn2 = $("#4");
+    $("body")
+
     var items, item, pos = -1;
     items = shuffleArray(data);
-    $("#1").prop("href", items[0].image);
+    preload.prop("href", items[0].image);
 
-    $("#3").on("click", () => {
+    btn1.on("click", () => {
         try {
-            $("#3").html('<i class="fas fa-forward"></i> Next Logo');
+            btn1.html('<i class="fa-solid fa-angle-right"></i> Next Logo');
             pos += 1;
             item = items[pos];
 
-            $("#0").prop("src", "assets/img/ready.jpg");
-            $("#2").html(`<i class="fa-solid fa-face-thinking"></i> Round ${pos + 1} - Get ready...`);
+            mainimg.prop("src", "assets/img/ready.jpg");
+            mainh3.html(`<i class="fa-solid fa-face-thinking"></i> Round ${pos + 1} - Get ready...`);
             setTimeout(() => {
-                $("#0").prop("src", item.image);
-                $("#2").html(`<i class="fa-solid fa-face-thinking"></i> Round ${pos + 1} - Guess now!`);
-
+                mainimg.prop("src", item.image);
+                mainh3.html(`<i class="fa-solid fa-face-thinking"></i> Round ${pos + 1} - Guess now!`);
             }, 1500);
 
-            $("#1").prop("href", items[pos + 1].image);
+            preload.prop("href", items[pos + 1].image);
         } catch (e) {
-            $("#0").prop("src", "assets/img/end.png");
-            $("#2").text('Thanks for playing!');
+            mainimg.prop("src", "assets/img/end.png");
+            mainh3.text('Thanks for playing!');
             $("#3, #4").prop("disabled", true);
         }
     });
 
-    $("#4").on("click", () => {
-        $("#2").html(`<i class="fas fa-circle-info"></i> It is ${item.name} made by ${item.company}. Released ${item.release}`);
+    btn2.on("click", () => {
+        mainh3.html(`<i class="fas fa-circle-info"></i> It is ${item.name} made by ${item.company}. Released ${item.release}`);
     });
 });
 

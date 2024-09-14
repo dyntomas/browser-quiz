@@ -2,7 +2,7 @@
   "name": "@dymtomas/browser-quiz",
   "display": "Browser Quiz",
   "description": "",
-  "version": "1.1-rc1",
+  "version": "1.1",
   "private": true,
   "homepage": "https://browserquiz.dyntomas.com/",
   "main": "webpack.config.js",

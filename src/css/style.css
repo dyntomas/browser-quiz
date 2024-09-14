@@ -65,11 +65,13 @@ a {
 img.logo {
     width: 100%;
     max-width: 1000px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 img.main {
+    object-fit: cover;
     width: 80%;
+    max-width: 1000px;
     height: auto;
 }
 

@@ -42,10 +42,10 @@ const config = {
         new PurgeCSSPlugin({
             paths: glob.sync(`${path.resolve(__dirname, 'public')}/*`, { nodir: true }),
         }),
-        /* new GenerateSW({
+        new GenerateSW({
             swDest: "sw.js",
             runtimeCaching: [{
-                handler: "NetworkFirst",
+                handler: "CacheFirst",
                 urlPattern: new RegExp("https\:\/\/demo|\.cdn\.dymtomas.com\/*"),
                 options: {
                     cacheName: "cdn-cache"
@@ -59,7 +59,7 @@ const config = {
             }],
             exclude: ["main.js", "main.css"],
             skipWaiting: true
-        }), */
+        }),
         new FileManagerPlugin({
             events: {
                 onEnd: {
@@ -84,9 +84,9 @@ const config = {
                 }
             }
         }),
-new FileManagerPlugin({
+        new FileManagerPlugin({
             events: {
-                 onStart: {
+                onStart: {
                     delete: [
                         path.resolve(__dirname, "public/assets/js/main.js"),
                         path.resolve(__dirname, "public/assets/css/main.css")
