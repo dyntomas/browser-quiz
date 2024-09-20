@@ -46,7 +46,7 @@ const config = {
             swDest: "sw.js",
             runtimeCaching: [{
                 handler: "CacheFirst",
-                urlPattern: new RegExp("https\:\/\/demo|\.cdn\.dymtomas.com\/*"),
+                urlPattern: new RegExp("https\:\/\/images|\.cdn\.dymtomas.com\/*"),
                 options: {
                     cacheName: "cdn-cache"
                 }

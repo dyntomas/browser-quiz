@@ -1,6 +1,6 @@
-JSON, JS, SW and Images
+CSS files, JS updates and CDN link
 
-- Minifed JSON
-- Added vars in JS src
-- CacheFirst service worker
-- Made images fill picture
+- Split css files
+- Added Arc browser
+- Put data in main code
+- Now using `images.cdn` instead of `demo.cdn`

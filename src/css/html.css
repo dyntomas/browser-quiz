@@ -30,7 +30,9 @@ a i {
 
 button,
 h1,
-h2 {
+h2,
+h3,
+h4 {
     font-family: calibri, "Trebuchet MS", sans-serif;
     color: azure
 }
@@ -51,63 +53,4 @@ button:hover {
 
 a {
     text-decoration: none
-}
-
-.padding {
-    padding-top: 16px !important;
-    padding-bottom: 16px !important
-}
-
-#content {
-    padding: 0 30%
-}
-
-img.logo {
-    width: 100%;
-    max-width: 1000px;
-    margin-bottom: 10px;
-}
-
-img.main {
-    object-fit: cover;
-    width: 80%;
-    max-width: 1000px;
-    height: auto;
-}
-
-@keyframes size {
-    0% {
-        width: 60%
-    }
-
-    100% {
-        width: 90%
-    }
-}
-
-@media only screen and (max-width:600px) {
-    .padding {
-        padding: 8px
-    }
-
-    img.main {
-        height: 300px;
-        width: auto
-    }
-
-    #content {
-        padding: 0
-    }
-
-    h1 {
-        font-size: 30px
-    }
-
-    button {
-        font-size: 25px
-    }
-
-    button:hover {
-        padding: 9px
-    }
 }

@@ -1,0 +1,191 @@
+[
+    {
+        "name": "Arc",
+        "image": "https://demo.cdn.dyntomas.com/0/XkMobrA.png",
+        "release": "25 July, 2023",
+        "company": "The Browser Company",
+        "source": "closed"
+    },
+    {
+        "name": "IceDragon",
+        "image": "https://demo.cdn.dyntomas.com/0/XkMobrA.png",
+        "release": "June 19, 2019",
+        "company": "Comodo",
+        "source": "open"
+    },
+    {
+        "name": "Firefox",
+        "image": "https://demo.cdn.dyntomas.com/0/DjNiwAR.png",
+        "release": "November 9, 2004",
+        "company": "Mozilla",
+        "source": "open"
+    },
+    {
+        "name": "Midori",
+        "image": "https://demo.cdn.dyntomas.com/0/kNj7Fzk.png",
+        "release": "December 16, 2007",
+        "company": "Midori",
+        "source": "open"
+    },
+    {
+        "name": "DuckDuckGo",
+        "image": "https://demo.cdn.dyntomas.com/0/DzDRyys.png",
+        "release": "April 2022",
+        "company": "DuckDuckGo",
+        "source": "closed"
+    },
+    {
+        "name": "Chrome",
+        "image": "https://demo.cdn.dyntomas.com/0/T0KeNbZ.png",
+        "release": "September 2, 2008",
+        "company": "Google",
+        "source": "closed"
+    },
+    {
+        "name": "Chromium",
+        "image": "https://demo.cdn.dyntomas.com/0/NFS7svu.png",
+        "release": "2 September 2008",
+        "company": "Google",
+        "source": "open"
+    },
+    {
+        "name": "Brave",
+        "image": "https://demo.cdn.dyntomas.com/0/VjF0Xzk.png",
+        "release": "13 November 2019",
+        "company": "Brave Software",
+        "source": "open"
+    },
+    {
+        "name": "Edge",
+        "image": "https://demo.cdn.dyntomas.com/0/nNJ5Uwe.png",
+        "release": "April 29, 2015",
+        "company": "Microsoft",
+        "source": "closed"
+    },
+    {
+        "name": "Waterfox",
+        "image": "https://demo.cdn.dyntomas.com/0/Hd4wOQD.png",
+        "release": "27 March 2011",
+        "company": "System1",
+        "source": "open"
+    },
+    {
+        "name": "Yandex",
+        "image": "https://demo.cdn.dyntomas.com/0/xpZ0tXh.png",
+        "release": "1 October 2012",
+        "company": "Yandex",
+        "source": "closed"
+    },
+    {
+        "name": "Netscape",
+        "image": "https://demo.cdn.dyntomas.com/0/mq3t51c.png",
+        "release": "15 December 1994",
+        "company": "Netscape",
+        "source": "closed"
+    },
+    {
+        "name": "Internet Explorer",
+        "image": "https://demo.cdn.dyntomas.com/0/U3YGsG3.png",
+        "release": "August 24, 1995",
+        "company": "Microsoft",
+        "source": "closed"
+    },
+    {
+        "name": "Safari",
+        "image": "https://demo.cdn.dyntomas.com/0/5KMwIsn.png",
+        "release": "January 7, 2003",
+        "company": "Apple",
+        "source": "closed"
+    },
+    {
+        "name": "Tor",
+        "image": "https://demo.cdn.dyntomas.com/0/FJMXNMC.png",
+        "release": "20 September 2002",
+        "company": "Tor Project",
+        "source": "open"
+    },
+    {
+        "name": "Opera GX",
+        "image": "https://demo.cdn.dyntomas.com/0/KBPxrvp.png",
+        "release": "June 11, 2019",
+        "company": "Opera",
+        "source": "closed"
+    },
+    {
+        "name": "Opera",
+        "image": "https://demo.cdn.dyntomas.com/0/kiaPlrm.png",
+        "release": "April 10, 1995",
+        "company": "Opera",
+        "source": "closed"
+    },
+    {
+        "name": "Vivaldi",
+        "image": "https://demo.cdn.dyntomas.com/0/Hy2uKff.png",
+        "release": "April 6, 2016",
+        "company": "Vivaldi Technologies",
+        "source": "closed"
+    },
+    {
+        "name": "Otter Browser",
+        "image": "https://demo.cdn.dyntomas.com/0/6I3UYjm.png",
+        "release": "January 1, 2014",
+        "company": "Otter Browser",
+        "source": "open"
+    },
+    {
+        "name": "Samsung Internet",
+        "image": "https://demo.cdn.dyntomas.com/0/wnK8RU8.png",
+        "release": "2015",
+        "company": "Samsung",
+        "source": "closed"
+    },
+    {
+        "name": "Blisk",
+        "image": "https://demo.cdn.dyntomas.com/0/15Qy0zn.png",
+        "release": "October 2022",
+        "company": "Blisk",
+        "source": "closed"
+    },
+    {
+        "name": "Silk",
+        "image": "https://demo.cdn.dyntomas.com/0/llCeNqm.png",
+        "release": "November 15, 2011",
+        "company": "Amazon",
+        "source": "closed"
+    },
+    {
+        "name": "SeaMonkey",
+        "image": "https://demo.cdn.dyntomas.com/0/vb6TtqD.png",
+        "release": "January 30, 2006",
+        "company": "SeaMonkey Council",
+        "source": "open"
+    },
+    {
+        "name": "Ladybird",
+        "image": "https://demo.cdn.dyntomas.com/0/lwzB8yn.png",
+        "release": "2026",
+        "company": "Ladybird Browser Initiative",
+        "source": "open"
+    },
+    {
+        "name": "Epic Browser",
+        "image": "https://demo.cdn.dyntomas.com/0/HJe6Vw2.png",
+        "release": "July 15, 2010",
+        "company": "Hidden Reflex",
+        "source": "closed"
+    },
+    {
+        "name": "Avast Secure Browser",
+        "image": "https://demo.cdn.dyntomas.com/0/kkPgBET.png",
+        "release": "2016",
+        "company": "Avast Software",
+        "source": "closed"
+    },
+    {
+        "name": "Zen Browser",
+        "image": "https://demo.cdn.dyntomas.com/0/WcrWkt6.svg",
+        "release": "Jul 7, 2024",
+        "company": "Zen Browser",
+        "source": "open"
+    }
+]
