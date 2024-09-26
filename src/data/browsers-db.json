@@ -1,7 +1,14 @@
 [
     {
+        "name": "Floorp",
+        "image": "https://images.cdn.dyntomas.com/0/PYqI2g1.png",
+        "release": "2021",
+        "company": "Ablaze",
+        "source": "open"
+    },
+    {
         "name": "Arc",
-        "image": "https://images.cdn.dyntomas.com/0/XkMobrA.png",
+        "image": "https://images.cdn.dyntomas.com/0/j5UlMsQ.png",
         "release": "25 July, 2023",
         "company": "The Browser Company",
         "source": "closed"
