@@ -1,4 +1,4 @@
-module.exports = async function registerServiceWorker() {
+module.exports = async () => {
     if ("serviceWorker" in navigator) {
         try {
             const registration = await navigator.serviceWorker.register("sw.js", {

@@ -1,9 +1,8 @@
 const $ = require("cash-dom");
 const { fetchJSON, shuffleArray, trigger } = require('@dyntomas/globaljs');
-const { version } = require("../../package.json");
 const browsers = require("../data/browsers-db.json");
 
-function app() {
+module.exports = () => {  
 // fetchJSON("assets/data/browsers-db.json", data => {
     $("#loading").hide();
     $("#playable").show();
@@ -49,8 +48,3 @@ $(document).on("keyup", evt => {
     evt.key == "Enter" && !$("#4").prop("disabled") ? trigger($("#4"), "click") : "";
 });
 // }
-
-module.exports = {
-version,
-app
-}

@@ -4,11 +4,11 @@ require('@fortawesome/fontawesome-free/css/solid.min.css');
 
 require('./css/html.css');
 require('./css/media.css');
-require('./css/classes.css');
 require('./css/keyframes.css');
+require('./css/classes.css');
 
-const { app } = require( './js/app');
-const sw = require('./js/sw-reg');
+const app = require( './js/app');
+const swreg = require('./js/sw-reg');
 
 app();
-sw();
+swreg();

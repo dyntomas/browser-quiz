@@ -7,8 +7,9 @@
   "homepage": "https://browserquiz.dyntomas.com/",
   "main": "webpack.config.js",
   "scripts": {
-    "build:dev": "webpack --mode development --watch",
-    "build:prod": "webpack --mode production",
+    "npm:link": "cd ./modules && npx link --deep */* && cd ..",
+    "build:dev": "git submodule update --remote --merge && webpack --mode development --watch --config webpack.dev.js",
+    "build:prod": "webpack --mode production --config webpack.prod.js",
     "deploy:dev": "netlify build && netlify deploy",
     "deploy:prod": "netlify build && netlify deploy --prod"
   },
@@ -35,7 +36,7 @@
     "workbox-webpack-plugin": "^7.1.0"
   },
   "dependencies": {
-    "@dyntomas/globaljs": "github:dyntomas/globaljs",
+    "@dyntomas/globaljs": "file:modules/@dyntomas/globaljs",
     "@fortawesome/fontawesome-free": "^6.6.0",
     "cash-dom": "^8.1.5",
     "w3-css": "^4.1.0"

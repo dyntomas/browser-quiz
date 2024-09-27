@@ -4,33 +4,11 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");;
 const { PurgeCSSPlugin } = require("purgecss-webpack-plugin");
 const FileManagerPlugin = require('filemanager-webpack-plugin');
+const TerserPlugin = require("terser-webpack-plugin");
 
-const config = {
-    entry: './src/index.js',
-    output: {
-        path: path.resolve(__dirname, 'public'),
-        filename: '[name].js'
-    },
-    module: {
-        rules: [
-            {
-                test: /\.js$/,
-                use: 'babel-loader',
-                exclude: /node_modules/
-            },
-            {
-                test: /\.css$/,
-                use: [
-                    MiniCssExtractPlugin.loader,
-                    {
-                        loader: 'css-loader',
-                        options: { url: false }
-                    }
-                ]
-            }
-        ]
-    },
-    plugins: [
+const config = require("./webpack.config");
+
+config.plugins = [
         new MiniCssExtractPlugin({
             filename: "[name].css"
         }),
@@ -77,7 +55,13 @@ const config = {
                 }
             }
         })
-    ]
-};
+    ];
+    config.optimization = {
+        usedExports: true,
+        minimizer: [
+            new CssMinimizerPlugin(),
+            new TerserPlugin()
+        ]
+}
 
 module.exports = config;
