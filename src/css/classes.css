@@ -4,7 +4,7 @@
 }
 
 .w3-container {
-    padding: 0 30%
+    padding: 0 30%;
 }
 
 img.logo {
@@ -14,7 +14,6 @@ img.logo {
 }
 
 img.main {
-    object-fit: cover;
     width: 80%;
     max-width: 1000px;
     height: auto;
