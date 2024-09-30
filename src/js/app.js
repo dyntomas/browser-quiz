@@ -1,8 +1,8 @@
-const $ = require("cash-dom");
-const { fetchJSON, shuffleArray, trigger } = require('@dyntomas/globaljs');
+import $ from "cash-dom";
+import { shuffleArray, trigger } from '@dyntomas/globaljs';
 const browsers = require("../data/browsers-db.json");
 
-module.exports = () => {  
+export default () => {  
 // fetchJSON("assets/data/browsers-db.json", data => {
     $("#loading").hide();
     $("#playable").show();

@@ -4,11 +4,13 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");;
 const { PurgeCSSPlugin } = require("purgecss-webpack-plugin");
 const FileManagerPlugin = require('filemanager-webpack-plugin');
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 const TerserPlugin = require("terser-webpack-plugin");
 
 const config = require("./webpack.config");
 
 config.plugins = [
+        new BundleAnalyzerPlugin(),
         new MiniCssExtractPlugin({
             filename: "[name].css"
         }),

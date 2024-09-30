@@ -1,6 +1,0 @@
-CSS files, JS updates and CDN link
-
-- Split css files
-- Added Arc browser
-- Put data in main code
-- Now using `images.cdn` instead of `demo.cdn`

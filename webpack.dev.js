@@ -4,6 +4,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");;
 const { PurgeCSSPlugin } = require("purgecss-webpack-plugin");
 const FileManagerPlugin = require('filemanager-webpack-plugin');
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 const { GenerateSW } = require('workbox-webpack-plugin');
 
 const { version } = require('./package.json');

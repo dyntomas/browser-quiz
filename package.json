@@ -2,7 +2,7 @@
   "name": "@dymtomas/browser-quiz",
   "display": "Browser Quiz",
   "description": "",
-  "version": "1.1-dev2709",
+  "version": "1.1-dev3009",
   "private": true,
   "homepage": "https://browserquiz.dyntomas.com/",
   "main": "webpack.config.js",
@@ -33,6 +33,7 @@
     "purgecss-webpack-plugin": "^6.0.0",
     "terser-webpack-plugin": "^5.3.10",
     "webpack": "^5.91.0",
+    "webpack-bundle-analyzer": "^4.10.2",
     "webpack-cli": "^5.1.4",
     "workbox-webpack-plugin": "^7.1.0"
   },

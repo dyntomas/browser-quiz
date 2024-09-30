@@ -75,7 +75,7 @@ define(['./workbox-837f16b5'], (function (workbox) { 'use strict';
 	  plugins: []
 	}), 'GET');
 	workbox.registerRoute(/\/*/, new workbox.NetworkFirst({
-	  "cacheName": "app-1.1",
+	  "cacheName": "app-1.1-dev3009",
 	  plugins: []
 	}), 'GET');
 
