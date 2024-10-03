@@ -67,14 +67,14 @@ if (!self.define) {
     });
   };
 }
-define(['./workbox-837f16b5'], (function (workbox) { 'use strict';
+define(['./workbox-3ae7ab64'], (function (workbox) { 'use strict';
 
 	self.skipWaiting();
-	workbox.registerRoute(/https:\/\/images|.cdn.dymtomas.com\/*/, new workbox.CacheFirst({
+	workbox.registerRoute(/https:\/\/*.cdn.dyntomas.com\/*/, new workbox.CacheFirst({
 	  "cacheName": "cdn-cache",
 	  plugins: []
 	}), 'GET');
-	workbox.registerRoute(/\/*/, new workbox.NetworkFirst({
+	workbox.registerRoute(/\/*/, new workbox.CacheFirst({
 	  "cacheName": "app-1.1-dev3009",
 	  plugins: []
 	}), 'GET');

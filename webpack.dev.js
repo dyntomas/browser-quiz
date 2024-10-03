@@ -1,10 +1,8 @@
 const path = require('path');
 const glob = require("glob");
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");;
-const { PurgeCSSPlugin } = require("purgecss-webpack-plugin");
 const FileManagerPlugin = require('filemanager-webpack-plugin');
-const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
+const { PurgeCSSPlugin } = require("purgecss-webpack-plugin");
 const { GenerateSW } = require('workbox-webpack-plugin');
 
 const { version } = require('./package.json');
@@ -22,12 +20,12 @@ config.plugins = [
             swDest: "sw.js",
             runtimeCaching: [{
                 handler: "CacheFirst",
-                urlPattern: new RegExp("https\:\/\/images|\.cdn\.dymtomas.com\/*"),
+                urlPattern: new RegExp("https://*.cdn.dyntomas.com/*"),
                 options: {
                     cacheName: "cdn-cache"
                 }
             }, {
-                handler: "NetworkFirst",
+                handler: "CacheFirst",
                 urlPattern: new RegExp("/*"),
                 options: {
                     cacheName: `app-${version}`
@@ -45,7 +43,7 @@ config.plugins = [
                             destination: path.resolve(__dirname, "public")
                         },
                         {
-                            source: `${path.resolve(__dirname, "node_modules/@fortawesome/fontawesome-free/webfonts")}/fa-solid-900.*`,
+                            source: `${path.resolve(__dirname, "node_modules/@fortawesome/fontawesome-free/fonts")}/fa-solid-900.*`,
                             destination: path.resolve(__dirname, "public/assets/webfonts")
                         },
                         {

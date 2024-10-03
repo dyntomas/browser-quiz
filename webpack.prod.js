@@ -41,7 +41,7 @@ config.plugins = [
                 }
             }
         }),
-        new FileManagerPlugin({
+        /*new FileManagerPlugin({
             events: {
                 onStart: {
                     delete: [
@@ -56,7 +56,7 @@ config.plugins = [
                     ]
                 }
             }
-        })
+        })*/
     ];
     config.optimization = {
         usedExports: true,
