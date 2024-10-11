@@ -1,15 +1,28 @@
 const path = require('path');
 const glob = require("glob");
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const FileManagerPlugin = require('filemanager-webpack-plugin');
 const { PurgeCSSPlugin } = require("purgecss-webpack-plugin");
+const FileManagerPlugin = require('filemanager-webpack-plugin');
 const { GenerateSW } = require('workbox-webpack-plugin');
 
 const { version } = require('./package.json');
 
-const config = require("./webpack.config");
+const { config, fmpFirst, fmpOpts } = require("./webpack.config");
 
 config.plugins = [
+new FileManagerPlugin({
+            events: {
+                onEnd: {
+                    move: [
+{
+                            source: path.resolve(__dirname, "public/main.js"),
+                            destination: path.resolve(__dirname, "public/assets/js/main.js")
+                        },
+{
+                            source: path.resolve(__dirname, "public/main.css"),
+                            destination: path.resolve(__dirname, "public/assets/css/main.css")
+                        }
+]}}}),
         new MiniCssExtractPlugin({
             filename: "[name].css"
         }),
@@ -34,46 +47,7 @@ config.plugins = [
             exclude: ["main.js", "main.css"],
             skipWaiting: true
         }),
-        new FileManagerPlugin({
-            events: {
-                onEnd: {
-                    copy: [
-                        {
-                            source: path.resolve(__dirname, "src/static"),
-                            destination: path.resolve(__dirname, "public")
-                        },
-                        {
-                            source: `${path.resolve(__dirname, "node_modules/@fortawesome/fontawesome-free/fonts")}/fa-solid-900.*`,
-                            destination: path.resolve(__dirname, "public/assets/webfonts")
-                        },
-                        {
-                            source: path.resolve(__dirname, "public/main.css"),
-                            destination: path.resolve(__dirname, "public/assets/css/main.css")
-                        },
-                        {
-                            source: path.resolve(__dirname, "public/main.js"),
-                            destination: path.resolve(__dirname, "public/assets/js/main.js")
-                        }
-                    ]
-                }
-            }
-        }),
-        new FileManagerPlugin({
-            events: {
-                onStart: {
-                    delete: [
-                        path.resolve(__dirname, "public/assets/js/main.js"),
-                        path.resolve(__dirname, "public/assets/css/main.css")
-                    ]
-                },
-                onEnd: {
-                    delete: [
-                        path.resolve(__dirname, "public/main.js"),
-                        path.resolve(__dirname, "public/main.css")
-                    ]
-                }
-            }
-        })
+        fmpFirst
     ];
 
 module.exports = config;

@@ -1,6 +1,6 @@
 import $ from "cash-dom";
 import { shuffleArray, trigger } from '@dyntomas/globaljs';
-const browsers = require("../data/browsers-db.json");
+const data = require("../data/browsers-db.json");
 
 export default () => {  
 // fetchJSON("assets/data/browsers-db.json", data => {
@@ -12,9 +12,9 @@ export default () => {
     const infotext = $("#2");
     const btn1 = $("#3");
     const btn2 = $("#4");
-
-    var items, item, pos = -1, data = browsers;
-    items = shuffleArray(data);
+  
+    var item, pos = -1;
+    const items = shuffleArray(data), imghost = "https://images.cdn.dyntomas.com/0/";
     preload.prop("href", items[0].image);
 
     btn1.on("click", () => {
@@ -26,11 +26,11 @@ export default () => {
             mainimg.prop("src", "assets/img/ready.jpg");
             infotext.html(`<i class="fa-solid fa-face-thinking"></i> Round ${pos + 1} - Get ready...`);
             setTimeout(() => {
-                mainimg.prop("src", item.image);
+                mainimg.prop("src", `${imghost}/${item.image}`);
                 infotext.html(`<i class="fa-solid fa-face-thinking"></i> Round ${pos + 1} - Guess now!`);
             }, 1500);
 
-            preload.prop("href", items[pos + 1].image);
+            preload.prop("href", `${imghost}/${items[pos + 1].image}`);
         } catch (e) {
             mainimg.prop("src", "assets/img/end.png");
             infotext.text('Thanks for playing!');
