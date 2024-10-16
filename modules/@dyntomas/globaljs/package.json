@@ -1,0 +1,18 @@
+{
+  "name": "@dyntomas/globaljs",
+  "keywords": [
+    "fetch",
+    "arrays",
+    "random",
+    "urlparams"
+  ],
+  "files": [
+    "dist"
+  ],
+  "version": "1.0.0",
+  "description": "A collection of reusable function for my projects",
+  "main": "dist/global.min.js",
+  "module": "dist/global.esm.js",
+  "author": "TriHydera",
+  "license": "GPL-2.0-only"
+}

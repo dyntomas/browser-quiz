@@ -1,0 +1,177 @@
+/*!**********************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/w3-css/w3.css ***!
+  \**********************************************************************************************************/
+/* W3.CSS 4.10 February 2018 by Jan Egil and Borge Refsnes */
+html{box-sizing:border-box}*,*:before,*:after{box-sizing:inherit}
+/* Extract from normalize.css by Nicolas Gallagher and Jonathan Neal git.io/normalize */
+html{-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}
+details,footer,header,main{display:block}[hidden]{display:none}
+a{background-color:transparent;-webkit-text-decoration-skip:objects}
+a:active,a:hover{outline-width:0}img{border-style:none}
+code{font-family:monospace,monospace;font-size:1em}
+button,input{font:inherit;margin:0}
+button,input{overflow:visible}button{text-transform:none}
+button,html [type=button]{-webkit-appearance:button}
+button::-moz-focus-inner, [type=button]::-moz-focus-inner{border-style:none;padding:0}
+button:-moz-focusring, [type=button]:-moz-focusring{outline:1px dotted ButtonText}
+[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}
+::-webkit-input-placeholder{color:inherit;opacity:0.54}
+::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}
+/* End extract */
+html,body{font-family:Verdana,sans-serif;font-size:15px;line-height:1.5}html{overflow-x:hidden}h2{font-size:30px}h3{font-size:24px}
+h2,h3{font-family:"Segoe UI",Arial,sans-serif;font-weight:400;margin:10px 0}img{vertical-align:middle}a{color:inherit}
+.w3-btn{border:none;display:inline-block;padding:8px 16px;vertical-align:middle;overflow:hidden;text-decoration:none;color:inherit;background-color:inherit;text-align:center;cursor:pointer;white-space:nowrap}
+.w3-btn:hover{box-shadow:0 8px 16px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19)}
+.w3-btn{-webkit-touch-callout:none;-webkit-user-select:none;-khtml-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}   
+.w3-btn:disabled{cursor:not-allowed;opacity:0.3}:disabled *{pointer-events:none}
+.w3-btn:disabled:hover{box-shadow:none}
+#main{transition:margin-left .4s}
+.w3-container:after,.w3-container:before{content:"";display:table;clear:both}
+.w3-container{padding:0.01em 16px}
+.w3-spin{animation:w3-spin 2s infinite linear}@keyframes w3-spin{0%{transform:rotate(0deg)}100%{transform:rotate(359deg)}}@keyframes fading{0%{opacity:0}50%{opacity:1}100%{opacity:0}}@keyframes opac{from{opacity:0} to{opacity:1}}@keyframes animatetop{from{top:-300px;opacity:0} to{top:0;opacity:1}}@keyframes animateleft{from{left:-300px;opacity:0} to{left:0;opacity:1}}@keyframes animateright{from{right:-300px;opacity:0} to{right:0;opacity:1}}@keyframes animatebottom{from{bottom:-300px;opacity:0} to{bottom:0;opacity:1}}@keyframes animatezoom{from{transform:scale(0)} to{transform:scale(1)}}.w3-center{text-align:center!important}
+/* Colors */
+.w3-blue{color:#fff!important;background-color:#2196F3!important}
+.w3-green{color:#fff!important;background-color:#4CAF50!important}
+
+/*!**************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/@fortawesome/fontawesome-free/css/fontawesome.min.css ***!
+  \**************************************************************************************************************************************************/
+/*!
+ * Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com
+ * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
+ * Copyright 2024 Fonticons, Inc.
+ */
+.fa{font-family:var(--fa-style-family,"Font Awesome 6 Free");font-weight:var(--fa-style,900)}.fa,.fa-solid,.fas{-moz-osx-font-smoothing:grayscale;-webkit-font-smoothing:antialiased;display:var(--fa-display,inline-block);font-style:normal;font-variant:normal;line-height:1;text-rendering:auto}.fa-solid,.fas{font-family:"Font Awesome 6 Free"}@keyframes fa-beat{0%,90%{transform:scale(1)}45%{transform:scale(var(--fa-beat-scale,1.25))}}@keyframes fa-bounce{0%{transform:scale(1) translateY(0)}10%{transform:scale(var(--fa-bounce-start-scale-x,1.1),var(--fa-bounce-start-scale-y,.9)) translateY(0)}30%{transform:scale(var(--fa-bounce-jump-scale-x,.9),var(--fa-bounce-jump-scale-y,1.1)) translateY(var(--fa-bounce-height,-.5em))}50%{transform:scale(var(--fa-bounce-land-scale-x,1.05),var(--fa-bounce-land-scale-y,.95)) translateY(0)}57%{transform:scale(1) translateY(var(--fa-bounce-rebound,-.125em))}64%{transform:scale(1) translateY(0)}to{transform:scale(1) translateY(0)}}@keyframes fa-fade{50%{opacity:var(--fa-fade-opacity,.4)}}@keyframes fa-beat-fade{0%,to{opacity:var(--fa-beat-fade-opacity,.4);transform:scale(1)}50%{opacity:1;transform:scale(var(--fa-beat-fade-scale,1.125))}}@keyframes fa-flip{50%{transform:rotate3d(var(--fa-flip-x,0),var(--fa-flip-y,1),var(--fa-flip-z,0),var(--fa-flip-angle,-180deg))}}@keyframes fa-shake{0%{transform:rotate(-15deg)}4%{transform:rotate(15deg)}8%,24%{transform:rotate(-18deg)}12%,28%{transform:rotate(18deg)}16%{transform:rotate(-22deg)}20%{transform:rotate(22deg)}32%{transform:rotate(-12deg)}36%{transform:rotate(12deg)}40%,to{transform:rotate(0deg)}}@keyframes fa-spin{0%{transform:rotate(0deg)}to{transform:rotate(1turn)}}.fa-angle-right:before{content:"\f105"}.fa-eye:before{content:"\f06e"}.fa-circle-info:before{content:"\f05a"}.fa-play:before{content:"\f04b"}.fa-spinner:before{content:"\f110"}
+/*!********************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/@fortawesome/fontawesome-free/css/solid.min.css ***!
+  \********************************************************************************************************************************************/
+/*!
+ * Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com
+ * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
+ * Copyright 2024 Fonticons, Inc.
+ */
+:root{--fa-style-family-classic:"Font Awesome 6 Free";--fa-font-solid:normal 900 1em/1 "Font Awesome 6 Free"}@font-face{font-family:"Font Awesome 6 Free";font-style:normal;font-weight:900;font-display:block;src:url(../webfonts/fa-solid-900.woff2) format("woff2"),url(../webfonts/fa-solid-900.ttf) format("truetype")}.fa-solid,.fas{font-weight:900}
+/*!************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./src/css/html.css ***!
+  \************************************************************************************************/
+body {
+    background: rgb(34, 193, 195);
+    background: linear-gradient(90deg, rgba(34, 193, 195, 1) 0%, rgba(105, 165, 80, 1) 30%, rgba(190, 119, 149, 1) 50%, rgba(105, 165, 102, 1) 70%, rgba(34, 193, 195, 1) 100%);
+    margin: 0;
+    min-height: 100vh;
+    user-select: none;
+}
+
+footer,
+header {
+    text-align: center;
+    background: #2322c9;
+    background: linear-gradient(0deg, #2322c9 0, #8040d4 20%, #5d41a9 50%, #8040d4 80%, #2322c9 100%);
+    color: #fff
+}
+
+header {
+    padding: 2px
+}
+
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%
+}
+
+a i {
+    float: left
+}
+
+button,
+h2,
+h3 {
+    font-family: calibri, "Trebuchet MS", sans-serif;
+    color: azure
+}
+
+button {
+    font-size: 30px;
+    width: 90%;
+    max-width: 600px;
+    margin-bottom: 10px;
+    animation: size 2s;
+    border-radius: 12px
+}
+
+button:hover {
+    rotate: 1.5deg;
+    padding: 12px
+}
+
+a {
+    text-decoration: none
+}
+/*!*****************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./src/css/keyframes.css ***!
+  \*****************************************************************************************************/
+@keyframes size {
+    0% {
+        width: 60%
+    }
+
+    100% {
+        width: 90%
+    }
+}
+/*!***************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./src/css/classes.css ***!
+  \***************************************************************************************************/
+.padding {
+    padding-top: 16px !important;
+    padding-bottom: 16px !important
+}
+
+.w3-container {
+    padding: 0 30%;
+}
+
+img.logo {
+    width: 100%;
+    max-width: 1000px;
+    margin-bottom: 10px;
+}
+
+img.main {
+    width: 80%;
+    max-width: 1000px;
+    height: auto;
+}
+/*!*************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./src/css/media.css ***!
+  \*************************************************************************************************/
+@media only screen and (max-width:600px) {
+    .padding {
+        padding: 8px
+    }
+
+    img.main {
+        height: 300px;
+        width: auto
+    }
+
+    .w3-container {
+        padding: 0 0;
+    }
+
+    button {
+        font-size: 25px;
+    }
+
+    button:hover {
+        padding: 9px;
+    }
+}
+/*!*********************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./src/style.css ***!
+  \*********************************************************************************************/
+
+
+/*# sourceMappingURL=main.css.map */

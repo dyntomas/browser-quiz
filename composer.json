@@ -1,20 +1,27 @@
 {
-  "name": "dyntomas/browser-quiz",
-  "keywords": [
-    "webapp",
-    "quiz",
-    "logo quiz",
-    "internet"
-  ],
-  "description": "A quiz about guessing popular web browsers that people use with just the logo",
-  "homepage": "https://browserquiz.dyntomas.com/",
-  "type": "project",
-  "license": "GPL-2.0-only",
-  "minimum-stability": "stable",
-  "authors": [
-    {
-      "name": "TriHydera",
-      "role": "Developer"
-    }
-  ]
+    "name": "dymtomas/browser-quiz",
+    "keywords": [
+        "webapp",
+        "quiz",
+        "logo quiz",
+        "internet"
+    ],
+    "description": "",
+    "version": "1.1-rc1",
+    "license": "GPL-2.0-only",
+    "type": "project",
+    "minimum-stability": "stable",
+    "dist": {
+        "url": "https://github.com/@dymtomas/browser-quiz/releases/download/browser-quiz_1.1-rc1.zip",
+        "type": "zip"
+    },
+    "extra": {
+        "display": "Browser Quiz",
+        "updated": "Thu Sep 12 2024"
+    },
+    "authors": [
+        {
+            "name": "TriHydera"
+        }
+    ]
 }

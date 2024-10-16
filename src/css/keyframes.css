@@ -1,0 +1,9 @@
+@keyframes size {
+    0% {
+        width: 60%
+    }
+
+    100% {
+        width: 90%
+    }
+}
