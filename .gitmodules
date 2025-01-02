@@ -1,3 +1,0 @@
-[submodule "globaljs"]
-	path = modules/@dyntomas/globaljs
-	url = https://github.com/dyntomas/globaljs

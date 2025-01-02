@@ -8,6 +8,6 @@ import stopuser from './js/stopuser';
 
 /* eslint-enable */
 
-(() => {
-[app, swreg, stopuser].forEach(func => func());
-});
+app()
+swreg()
+stopuser()

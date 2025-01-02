@@ -2,9 +2,9 @@
     "name": "Browser Quiz",
     "short_name": "Browser Quiz",
     "theme_color": "rgb(34, 193, 195)",
-    "background_color": "",
+    "background_color": "rgb(34, 193, 195)",
     "display": "standalone",
-    "orientation": "",
+    "orientation": "landscape",
     "scope": "/",
     "start_url": "/?pwa=1",
     "icons": [

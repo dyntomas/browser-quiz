@@ -1,20 +1,23 @@
 import $ from "cash-dom";
-import { shuffleArray, trigger } from '@dyntomas/globaljs';
+import { shuffleArray, trigger } from '@trinodera/useful';
+import { ViewController } from '@trinodera/view'
 const data = require("../data/browsers-db.json");
 
-export default () => {  
-// fetchJSON("assets/data/browsers-db.json", data => {
-    $("#loading").hide();
-    $("#playable").show();
+export default () => {
+    const view = new ViewController({
+        target: ".view"
+    });
+
+    view.setView("playable")
 
     const mainimg = $("#0");
     const preload = $("#1");
     const infotext = $("#2");
     const btn1 = $("#3");
     const btn2 = $("#4");
-  
+
     var item, pos = -1;
-    const items = shuffleArray(data), imghost = "https://images.cdn.dyntomas.com/0/";
+    const items = shuffleArray(data), imghost = "https://images.cdn.dyntomas.com/0";
     preload.prop("href", items[0].image);
 
     btn1.on("click", () => {
@@ -41,10 +44,10 @@ export default () => {
     btn2.on("click", () => {
         infotext.html(`<i class="fas fa-circle-info"></i> It is ${item.name} made by ${item.company}.<br> Released ${item.release}`);
     });
-};
 
-$(document).on("keyup", evt => {
-    evt.key == " " && !$("#3").prop("disabled") ? trigger($("#3"), "click") : "";
-    evt.key == "Enter" && !$("#4").prop("disabled") ? trigger($("#4"), "click") : "";
-});
-// }
+
+    $(document).on("keyup", evt => {
+        evt.key == " " && !$("#3").prop("disabled") ? trigger($("#3"), "click") : "";
+        evt.key == "Enter" && !$("#4").prop("disabled") ? trigger($("#4"), "click") : "";
+    });
+}

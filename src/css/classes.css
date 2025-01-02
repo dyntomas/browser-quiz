@@ -18,3 +18,7 @@ img.main {
     max-width: 1000px;
     height: auto;
 }
+
+.hidden {
+    display: none;
+}

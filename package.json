@@ -1,5 +1,5 @@
 {
-  "name": "@dymtomas/browser-quiz",
+  "name": "@dyntomas/browser-quiz",
   "display": "Browser Quiz",
   "description": "",
   "version": "1.1-dev1011",
@@ -9,8 +9,8 @@
   "scripts": {
     "npm:link": "cd ./modules && npx link --deep */* && cd ..",
     "git:sub": "git submodule update --remote --merge",
-    "build:dev": "webpack --mode development --watch --config webpack.dev.js",
-    "build:prod": "webpack --mode production --config webpack.prod.js",
+    "build:dev": "webpack --mode development --watch",
+    "build:prod": "webpack --mode production",
     "deploy:dev": "netlify build && netlify deploy",
     "deploy:prod": "netlify build && netlify deploy --prod"
   },
@@ -30,6 +30,7 @@
     "css-minimizer-webpack-plugin": "^6.0.0",
     "eslint": "^9.11.1",
     "filemanager-webpack-plugin": "^8.0.0",
+    "git-rev-sync": "^3.0.2",
     "glob": "^11.0.0",
     "mini-css-extract-plugin": "^2.9.0",
     "next": "^14.2.15",
@@ -41,8 +42,9 @@
     "workbox-webpack-plugin": "^7.1.0"
   },
   "dependencies": {
-    "@dyntomas/globaljs": "github:dyntomas/globaljs",
     "@fortawesome/fontawesome-free": "^6.6.0",
+    "@trinodera/useful": "github:TriNodera/useful",
+    "@trinodera/view": "github:TriNodera/view",
     "cash-dom": "^8.1.5",
     "w3-css": "^4.1.0"
   }
