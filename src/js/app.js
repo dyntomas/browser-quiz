@@ -15,13 +15,21 @@ export default () => {
     const infotext = $("#2");
     const btn1 = $("#3");
     const btn2 = $("#4");
+    const help = $("#5")
+    const helpback = $("#6")
 
     var item, pos = -1;
     const items = shuffleArray(data), imghost = "https://images.cdn.dyntomas.com/0";
-    preload.prop("href", items[0].image);
 
+    // Starts game
     btn1.on("click", () => {
-        try {
+        if(pos == -1) {
+            btn2.show()
+            btn2.addClass("w3-btn w3-green")
+            help.hide()
+        }
+
+        if(pos <= items.length) {
             btn1.html('<i class="fa-solid fa-angle-right"></i> Next Logo');
             pos += 1;
             item = items[pos];
@@ -34,20 +42,29 @@ export default () => {
             }, 1500);
 
             preload.prop("href", `${imghost}/${items[pos + 1].image}`);
-        } catch (e) {
+        } else {
             mainimg.prop("src", "assets/img/end.png");
             infotext.text('Thanks for playing!');
             $("#3, #4").prop("disabled", true);
         }
     });
 
+    // Reveals anwser
     btn2.on("click", () => {
         infotext.html(`<i class="fas fa-circle-info"></i> It is ${item.name} made by ${item.company}.<br> Released ${item.release}`);
     });
 
+    // Help button on playable
+    help.on("click", () => {
+        view.setView("help")
+    })
+
+    // Back button on help
+    helpback.on("click", () => {
+        view.setView("playable")
+    })
 
     $(document).on("keyup", evt => {
-        evt.key == " " && !$("#3").prop("disabled") ? trigger($("#3"), "click") : "";
-        evt.key == "Enter" && !$("#4").prop("disabled") ? trigger($("#4"), "click") : "";
+        evt.key == "Enter" && !btn2.prop("disabled") ? trigger(btn2, "click") : "";
     });
 }

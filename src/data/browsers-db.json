@@ -22,7 +22,7 @@
     },
     {
         "name": "Firefox",
-        "image": "0/DjNiwAR.png",
+        "image": "DjNiwAR.png",
         "release": "November 9, 2004",
         "company": "Mozilla",
         "source": "open"
@@ -168,13 +168,6 @@
         "source": "open"
     },
     {
-        "name": "Ladybird",
-        "image": "lwzB8yn.png",
-        "release": "2026",
-        "company": "Ladybird Browser Initiative",
-        "source": "open"
-    },
-    {
         "name": "Epic Browser",
         "image": "HJe6Vw2.png",
         "release": "July 15, 2010",
@@ -187,12 +180,5 @@
         "release": "2016",
         "company": "Avast Software",
         "source": "closed"
-    },
-    {
-        "name": "Zen Browser",
-        "image": "lWcrWkt6.svg",
-        "release": "Jul 7, 2024",
-        "company": "Zen Browser",
-        "source": "open"
     }
 ]

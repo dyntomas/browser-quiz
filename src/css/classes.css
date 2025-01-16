@@ -22,3 +22,7 @@ img.main {
 .hidden {
     display: none;
 }
+
+p.help {
+    color: white;
+}

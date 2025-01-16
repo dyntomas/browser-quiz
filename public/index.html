@@ -7,7 +7,7 @@
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Browser Quiz</title>  
+  <title>Browser Quiz</title>
 
   <link rel="stylesheet" href="assets/css/main.css">
   <script src="assets/js/main.js" defer></script>
@@ -25,10 +25,13 @@
   <div class="w3-container w3-center">
     <img src="assets/img/logo.png" class="logo" alt="Logo">
 
+    <!-- Loading -->
     <div class="view" data-id="loading">
       <p><i class="fa fa-spinner w3-spin" style="font-size:200px"></i></p>
     </div>
+    <!-- End Loading -->
 
+    <!-- Playable -->
     <div class="view hidden" data-id="playable">
       <img src="assets/img/start.jpg" class="main" alt="browser logo" id="0">
       <link rel="preload" as="image" id="1">
@@ -41,23 +44,38 @@
         <button id="3" class="w3-btn w3-blue">
           <i class="fas fa-play"></i> Start Game
         </button>
-        <button id="4" class="w3-btn w3-green">
+        <button id="4" class="hidden">
           <i class="fas fa-eye"></i> Show Anwser
+        </button>
+        <button id="5" class="w3-btn w3-green">
+          <i class="fas fa-question"></i> Help
         </button>
       </div>
       <div class="padding"></div>
-
-      <div class="w3-green">
-        <h2>Help</h2>
       </div>
-        <p><i class="fas fa-circle-info"></i> A group game of guessing popular web browsers that people use to access
-          the internet, it doesn't give points so its up to you!</p>
-        <p><i class="fas fa-circle-info"></i> Press Next and take a guess of the logo, then Show Answer to so if
-          your correct, play with yourself or as a group.</p>
-        <p><i class="fas fa-circle-info"></i> Press Space for Next and Enter for Show Anwser</p>
+      <!-- End Playable -->
 
+      <!-- Help -->
+      <div class="view hidden" data-id="help">
+        <div class="w3-green">
+          <h2>Help</h2>
+        </div>
+        <p class="help"><i class="fas fa-circle-info"></i> A group game of guessing popular web browsers that people use to access
+          the internet, it doesn't give points so its up to you!</p>
+        <p class="help"><i class="fas fa-circle-info"></i> Press Next and take a guess of the logo, then Show Answer to so if
+          your correct, play with yourself or as a group.</p>
+        <p class="help"><i class="fas fa-circle-info"></i> Press Space for Next and Enter for Show Anwser</p>
+
+        <div class="padding"></div>
+
+        <button id="6" class="w3-btn w3-green">
+          <i class="fas fa-arrow-left"></i> Back
+        </button>
+      </div>
+      <!-- End help -->
     </div>
   </div>
+
   <div class="padding"></div>
 
   <footer>

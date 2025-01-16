@@ -1,15 +1,14 @@
-## Release 1.1
+## Release 1.1.1
 
-### Dev
+### Technical
 
-- Using `Webpack` to complie code
-- `W3CSS`, `Font Awesome` and `Cash` are now bundled
-- Moved `assets` to their own folder
-- Data now in main code
+- Fixed `Firefox` image ID
+- Removed `Ladybird` as its not out yet
+- Removed `Zen` as the icon broke
+- Fixed ending logic
+- Removed `Spacebar` control as it didn't work
 
 ### Features
 
-- Added `5` more browsers
-- Added offline caching
-- New icon and installable
-- Answer has has two lines
+- Added separate `help page`
+- Now hides button when not needed

@@ -77,8 +77,6 @@ const config = {
         pcp
     ]
 }
-
-if (mode == "development") {
     config.plugins.push(new GenerateSW({
         swDest: "sw.js",
         runtimeCaching: [{
@@ -91,13 +89,12 @@ if (mode == "development") {
             handler: "CacheFirst",
             urlPattern: new RegExp("/*"),
             options: {
-                cacheName: `app-${git.short()}`
+                cacheName: `app-${require("./package.json").version}`
             }
         }],
         exclude: ["main.js", "main.css"],
         skipWaiting: true
     }));
-}
 
 if (mode == "production") {
     // config.plugins.push(new BundleAnalyzerPlugin())
