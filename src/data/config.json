@@ -180,5 +180,26 @@
         "release": "2016",
         "company": "Avast Software",
         "source": "closed"
+    },
+        {
+        "name": "Zen Browser",
+        "image": "lWcrWkt6.png",
+        "release": "Jul 7, 2024",
+        "company": "Zen Browser",
+        "source": "open"
+    },
+    {
+        "name": "ChatGPT Atlas",
+        "image": "AYaofv4o.png",
+        "release": "October 21, 2025",
+        "company": "OpenAI",
+        "source": "closed"
+    },
+    {
+        "name": "Comet",
+        "image": "ryYhP6aV.png",
+        "release": "July 9, 2025",
+        "company": "Perplexity",
+        "source": "closed"
     }
 ]

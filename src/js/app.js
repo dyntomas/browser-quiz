@@ -1,15 +1,35 @@
 import $ from "cash-dom";
+import ls from 'localstorage-slim'
 import { shuffleArray, trigger } from '@trinodera/useful';
-import { ViewController } from '@trinodera/view'
-const data = require("../data/browsers-db.json");
+import { views, setView } from "./view";
 
-export default () => {
-    const view = new ViewController({
-        target: ".view"
-    });
+export default async () => {
+    /********************************/
+    /* Vars
+    /********************************/
+    const version = require("../../package.json").version
 
-    view.setView("playable")
+    /********************************/
+    /* Get config data
+    /********************************/
+    const cacheKey = "_data"
+    if (!ls.get(cacheKey)) {
+        const res = await fetch('data/config.json')
+        const configData = await res.json()
+        ls.set(cacheKey, configData, { encrypt: true })
+    }
+    if (!ls.get("_version")) {
+        ls.set("_version", version)
+    }
 
+    /********************************/
+    /* Set to first view
+    /********************************/
+    setView("playable", views)
+
+    /********************************/
+    /* Setup vars
+    /********************************/
     const mainimg = $("#0");
     const preload = $("#1");
     const infotext = $("#2");
@@ -17,54 +37,83 @@ export default () => {
     const btn2 = $("#4");
     const help = $("#5")
     const helpback = $("#6")
+    const btns = $("#buttons")
 
     var item, pos = -1;
-    const items = shuffleArray(data), imghost = "https://images.cdn.dyntomas.com/0";
+    const items = shuffleArray(ls.get(cacheKey, { decrypt: true })), imghost = "https://images.cdn.dyntomas.com/0";
 
-    // Starts game
+    /********************************/
+    /* Preload images
+    /********************************/
+    items.forEach(item => {
+        preload.prop("href", `${imghost}/${item.image}`);
+    })
+    preload.remove()
+
+    /********************************/
+    /* Start
+    /********************************/
     btn1.on("click", () => {
-        if(pos == -1) {
+        if (pos == -1) {
             btn2.show()
             btn2.addClass("w3-btn w3-green")
             help.hide()
         }
 
-        if(pos <= items.length) {
+        if (pos <= items.length) {
             btn1.html('<i class="fa-solid fa-angle-right"></i> Next Logo');
             pos += 1;
             item = items[pos];
 
             mainimg.prop("src", "assets/img/ready.jpg");
             infotext.html(`<i class="fa-solid fa-face-thinking"></i> Round ${pos + 1} - Get ready...`);
+            $("#buttons button").attr("disabled", "");
+
             setTimeout(() => {
                 mainimg.prop("src", `${imghost}/${item.image}`);
                 infotext.html(`<i class="fa-solid fa-face-thinking"></i> Round ${pos + 1} - Guess now!`);
+                $("#buttons button").removeAttr("disabled")
             }, 1500);
-
-            preload.prop("href", `${imghost}/${items[pos + 1].image}`);
         } else {
             mainimg.prop("src", "assets/img/end.png");
             infotext.text('Thanks for playing!');
-            $("#3, #4").prop("disabled", true);
+            btns.hide();
         }
     });
 
-    // Reveals anwser
+    /********************************/
+    /* Reveals anwser
+    /********************************/
     btn2.on("click", () => {
-        infotext.html(`<i class="fas fa-circle-info"></i> It is ${item.name} made by ${item.company}.<br> Released ${item.release}`);
+        infotext.html(`<i class="fas fa-circle-info"></i> This is ${item.name} made by ${item.company}.<br> Released ${item.release}`);
     });
 
-    // Help button on playable
+    /********************************/
+    /* Help button on playable
+    /********************************/
     help.on("click", () => {
-        view.setView("help")
+        setView("help", views)
     })
 
-    // Back button on help
+    /********************************/
+    /* Back button on help
+    /********************************/
     helpback.on("click", () => {
-        view.setView("playable")
+        setView("playable", views)
     })
 
+    /********************************/
+    /* Keyboard shortcut
+    /********************************/
     $(document).on("keyup", evt => {
         evt.key == "Enter" && !btn2.prop("disabled") ? trigger(btn2, "click") : "";
+    });
+
+    /********************************/
+    /* Dtops dragging and right-click
+    /********************************/
+    $('body').on('dragstart drop contextmenu', function (e) {
+        e.preventDefault();
+        return false;
     });
 }

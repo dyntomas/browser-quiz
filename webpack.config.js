@@ -5,9 +5,7 @@ const FileManagerPlugin = require('filemanager-webpack-plugin');
 const { PurgeCSSPlugin } = require("purgecss-webpack-plugin");
 const { GenerateSW } = require('workbox-webpack-plugin');
 const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
-const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 const TerserPlugin = require("terser-webpack-plugin");
-const git = require("git-rev-sync");
 
 const mode = process.env.NODE_ENV || "production";
 const mcep = new MiniCssExtractPlugin({
@@ -18,6 +16,7 @@ const pcp = new PurgeCSSPlugin({
 });
 
 const config = {
+    mode,
     entry: './src/index.js',
     output: {
         path: path.resolve(__dirname, 'public'),
@@ -55,6 +54,10 @@ const config = {
                             source: path.resolve(__dirname, "src/static"),
                             destination: path.resolve(__dirname, "public")
                         },
+                        // {
+                        //     source: `${path.resolve(__dirname, "node_modules/@fortawesome/fontawesome-free/fonts")}/fa-brands-400.*`,
+                        //     destination: path.resolve(__dirname, "public/assets/webfonts")
+                        // },
                         // {
                         //     source: `${path.resolve(__dirname, "node_modules/@fortawesome/fontawesome-free/fonts")}/fa-solid-900.*`,
                         //     destination: path.resolve(__dirname, "public/assets/webfonts")
@@ -97,7 +100,6 @@ const config = {
     }));
 
 if (mode == "production") {
-    // config.plugins.push(new BundleAnalyzerPlugin())
     config.plugins.push(new PurgeCSSPlugin({
         paths: glob.sync(`${path.resolve(__dirname, 'public')}/*`, { nodir: true }),
     }));

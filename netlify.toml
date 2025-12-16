@@ -1,0 +1,6 @@
+[build]
+  publish = "public"
+  command = "webpack"
+
+[build.processing.html]
+  pretty_urls = true

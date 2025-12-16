@@ -1,3 +1,7 @@
+:root {
+    --img-size: 300px;
+}
+
 .padding {
     padding-top: 16px !important;
     padding-bottom: 16px !important
@@ -7,15 +11,20 @@
     padding: 0 30%;
 }
 
+footer .fas {
+    size: 20px;
+    color: black;
+}
+
 img.logo {
-    width: 100%;
-    max-width: 1000px;
+    width: 80%;
+    max-width: var(--img-size);
     margin-bottom: 10px;
 }
 
 img.main {
     width: 80%;
-    max-width: 1000px;
+    max-width: var(--img-size);
     height: auto;
 }
 
@@ -25,4 +34,35 @@ img.main {
 
 p.help {
     color: white;
+}
+
+ul.no-bullets {
+    list-style-type: none;
+    /* Remove bullets */
+    padding: 0;
+    /* Remove padding */
+    margin: 0;
+    /* Remove margins */
+}
+
+.view button {
+    font-size: 30px;
+    width: 80%;
+    max-width: 600px;
+    margin-bottom: 10px;
+    animation: size 2s;
+    border-radius: 12px
+}
+
+#infobox {
+    font-family: calibri, "Trebuchet MS", sans-serif;
+    text-align: center;
+    background-color: darkgray;
+    color: black;
+    width: 300px;
+    font-size: 20px;
+}
+
+#infobox p {
+    margin: 0 0;
 }

@@ -6,17 +6,12 @@ body {
     user-select: none;
 }
 
-footer,
-header {
+/* footer {
     text-align: center;
     background: #2322c9;
     background: linear-gradient(0deg, #2322c9 0, #8040d4 20%, #5d41a9 50%, #8040d4 80%, #2322c9 100%);
     color: #fff
-}
-
-header {
-    padding: 2px
-}
+} */
 
 footer {
     position: fixed;
@@ -38,16 +33,7 @@ h4 {
     color: azure
 }
 
-button {
-    font-size: 30px;
-    width: 90%;
-    max-width: 600px;
-    margin-bottom: 10px;
-    animation: size 2s;
-    border-radius: 12px
-}
-
-button:hover {
+.view button:hover {
     rotate: 1.5deg;
     padding: 12px
 }
