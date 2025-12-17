@@ -4,13 +4,12 @@
 
 - Added more browsers
 - Replaced footer with info menu
+- Disables buttons when waiting
+- Fixed text in help page and other places
 
 ### Technical
 
 - Moved data to a file
 - Changed view changer to a single function
-- Fixed help menu
 - Minify HTML
-- Disables buttons when waiting
-- Fixed text
 - Preloading all images at start
