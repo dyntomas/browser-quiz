@@ -1,14 +1,21 @@
 import $ from "cash-dom";
 import { shuffleArray, trigger } from '@trinodera/useful';
-import { ViewController } from '@trinodera/view'
-const data = require("../data/browsers-db.json");
+import { views, setView } from "./view";
+import { config } from "./config";
 
-export default () => {
-    const view = new ViewController({
-        target: ".view"
-    });
+export default async () => {
+    setView("playable", views)
 
-    view.setView("playable")
+    /********************************/
+    /* Vars
+    /********************************/
+    const version = require("../../package.json").version
+
+    /***************************************/
+    // * Infobox
+    /***************************************/
+    $("#version").innerText = version
+    $("#sitename").innerText = document.querySelector("title").innerText
 
     const mainimg = $("#0");
     const preload = $("#1");
@@ -17,8 +24,7 @@ export default () => {
     const btn2 = $("#4");
 
     var item, pos = -1;
-    const items = shuffleArray(data), imghost = "https://images.cdn.dyntomas.com/0";
-    preload.prop("href", items[0].image);
+    const items = shuffleArray(config), imghost = "https://images.cdn.dyntomas.com/0";
 
     btn1.on("click", () => {
         try {
@@ -47,7 +53,6 @@ export default () => {
 
 
     $(document).on("keyup", evt => {
-        evt.key == " " && !$("#3").prop("disabled") ? trigger($("#3"), "click") : "";
-        evt.key == "Enter" && !$("#4").prop("disabled") ? trigger($("#4"), "click") : "";
+        evt.key == "Enter" && !btn2.prop("disabled") ? trigger(btn2, "click") : "";
     });
 }

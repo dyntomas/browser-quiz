@@ -1,35 +1,23 @@
 const path = require('path');
-const glob = require("glob");
+const { globSync } = require('glob');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const FileManagerPlugin = require('filemanager-webpack-plugin');
 const { PurgeCSSPlugin } = require("purgecss-webpack-plugin");
+const FileManagerPlugin = require('filemanager-webpack-plugin');
 const { GenerateSW } = require('workbox-webpack-plugin');
 const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
-const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 const TerserPlugin = require("terser-webpack-plugin");
-const git = require("git-rev-sync");
 
 const mode = process.env.NODE_ENV || "production";
-const mcep = new MiniCssExtractPlugin({
-    filename: "[name].css"
-});
-const pcp = new PurgeCSSPlugin({
-    paths: glob.sync(`${path.resolve(__dirname, 'public')}/*`, { nodir: true }),
-});
-
 const config = {
+    mode,
     entry: './src/index.js',
     output: {
         path: path.resolve(__dirname, 'public'),
-        asyncChunks: true
+        filename: 'assets/[name].js',
+        clean: true
     },
     module: {
         rules: [
-            {
-                test: /\.js$/,
-                use: 'babel-loader',
-                exclude: /node_modules/
-            },
             {
                 test: /\.css$/,
                 use: [
@@ -46,73 +34,46 @@ const config = {
         new FileManagerPlugin({
             events: {
                 onEnd: {
-                    delete: [
-                        path.resolve(__dirname, "public/assets/js"),
-                        path.resolve(__dirname, "public/assets/css")
-                    ],
                     copy: [
                         {
                             source: path.resolve(__dirname, "src/static"),
                             destination: path.resolve(__dirname, "public")
-                        },
-                        // {
-                        //     source: `${path.resolve(__dirname, "node_modules/@fortawesome/fontawesome-free/fonts")}/fa-solid-900.*`,
-                        //     destination: path.resolve(__dirname, "public/assets/webfonts")
-                        // }
-                    ],
-                    move: [
-                        {
-                            source: path.resolve(__dirname, "public/main.js"),
-                            destination: path.resolve(__dirname, "public/assets/js/main.js")
-                        },
-                        {
-                            source: path.resolve(__dirname, "public/main.css"),
-                            destination: path.resolve(__dirname, "public/assets/css/main.css")
                         }
                     ]
                 }
             }
         }),
-        mcep,
-        pcp
-    ]
-}
-
-if (mode == "development") {
-    config.plugins.push(new GenerateSW({
-        swDest: "sw.js",
-        runtimeCaching: [{
-            handler: "CacheFirst",
-            urlPattern: new RegExp("https://*.cdn.dyntomas.com/*"),
-            options: {
-                cacheName: "cdn-cache"
-            }
-        }, {
-            handler: "CacheFirst",
-            urlPattern: new RegExp("/*"),
-            options: {
-                cacheName: `app-${git.short()}`
-            }
-        }],
-        exclude: ["main.js", "main.css"],
-        skipWaiting: true
-    }));
-}
-
-if (mode == "production") {
-    // config.plugins.push(new BundleAnalyzerPlugin())
-    config.plugins.push(new PurgeCSSPlugin({
-        paths: glob.sync(`${path.resolve(__dirname, 'public')}/*`, { nodir: true }),
-    }));
-
-    config.optimization = {
+        new MiniCssExtractPlugin({
+            filename: "assets/[name].css"
+        }),
+        new PurgeCSSPlugin({
+            paths: globSync(`${path.resolve(__dirname, 'public')}/*`, { nodir: true }),
+        }),
+        new GenerateSW({
+            swDest: "sw.js",
+            runtimeCaching: [{
+                handler: "CacheFirst",
+                urlPattern: new RegExp("https://*.cdn.dyntomas.com/*"),
+                options: {
+                    cacheName: "cdn-cache"
+                }
+            }, {
+                handler: "CacheFirst",
+                urlPattern: new RegExp("/*"),
+                options: {
+                    cacheName: `app-${require("./package.json").version}`
+                }
+            }],
+            skipWaiting: true
+        })
+    ],
+    optimization: {
         usedExports: true,
         minimizer: [
             new CssMinimizerPlugin(),
             new TerserPlugin()
         ]
     }
-
 }
 
 module.exports = config;

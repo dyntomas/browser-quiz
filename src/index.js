@@ -1,6 +1,10 @@
-/* eslint-disable */
+import 'w3-css/w3.css';
 
-import './style.css';
+import './css/html.css';
+import './css/keyframes.css';
+import './css/classes.css';
+import './css/media.css';
+import './css/fontello.css';
 
 import app from './js/app';
 import swreg from './js/sw-reg';

@@ -1,15 +1,11 @@
-## Release 1.1
-
-### Dev
-
-- Using `Webpack` to complie code
-- `W3CSS`, `Font Awesome` and `Cash` are now bundled
-- Moved `assets` to their own folder
-- Data now in main code
+## Release 1.2.2
 
 ### Features
 
-- Added `5` more browsers
-- Added offline caching
-- New icon and installable
-- Answer has has two lines
+- Added more content
+
+### Technical
+
+- Removed `X-UA-Compatible` meta tag
+- Replaced `Font Awesome` with `Fontello
+- Config now in main code
