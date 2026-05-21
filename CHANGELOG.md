@@ -9,3 +9,4 @@
 - Removed `X-UA-Compatible` meta tag
 - Replaced `Font Awesome` with `Fontello
 - Config now in main code
+- Fix `Cash Dom` error

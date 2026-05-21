@@ -1,0 +1,5 @@
+{"ts":"2026-05-21T19:16:35.461Z","session":"20260521-191635","kind":"server_start","data":{"port":5500,"host":"0.0.0.0","root":"c:\\Users\\Owner\\Git\\browser-quiz","https":false,"live_reload":true}}
+{"ts":"2026-05-21T19:16:35.671Z","session":"20260521-191635","kind":"ws_connect","data":{"client_id":"c0","url":"http://localhost:5500/public/index.html","user_agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:150.0) Gecko/20100101 Firefox/150.0","viewport":[1520,770]}}
+{"ts":"2026-05-21T19:16:37.534Z","session":"20260521-191635","kind":"http_request","data":{"method":"GET","path":"/","status":200,"duration_ms":0}}
+{"ts":"2026-05-21T19:16:37.864Z","session":"20260521-191635","kind":"ws_connect","data":{"client_id":"c1","url":"http://localhost:5500/","user_agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:150.0) Gecko/20100101 Firefox/150.0","viewport":[1520,770]}}
+{"ts":"2026-05-21T19:16:38.170Z","session":"20260521-191635","kind":"ws_disconnect","data":{"client_id":"c0"}}

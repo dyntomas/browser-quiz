@@ -48,6 +48,7 @@ const config = {
         }),
         new PurgeCSSPlugin({
             paths: globSync(`${path.resolve(__dirname, 'public')}/*`, { nodir: true }),
+            safelist: ["icon-info-circled", "icon-left-big", "icon-angle-right"]
         }),
         new GenerateSW({
             swDest: "sw.js",

@@ -1,0 +1,16 @@
+{"ts":"2026-05-21T19:14:49.759Z","session":"20260521-191449","kind":"server_start","data":{"port":5500,"host":"0.0.0.0","root":"c:\\Users\\Owner\\Git\\browser-quiz","https":false,"live_reload":true}}
+{"ts":"2026-05-21T19:14:56.008Z","session":"20260521-191449","kind":"http_request","data":{"method":"GET","path":"/","status":200,"duration_ms":1}}
+{"ts":"2026-05-21T19:14:56.314Z","session":"20260521-191449","kind":"ws_connect","data":{"client_id":"c0","url":"http://localhost:5500/","user_agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:150.0) Gecko/20100101 Firefox/150.0","viewport":[1520,770]}}
+{"ts":"2026-05-21T19:15:22.653Z","session":"20260521-191449","kind":"ws_disconnect","data":{"client_id":"c0"}}
+{"ts":"2026-05-21T19:16:03.736Z","session":"20260521-191449","kind":"http_request","data":{"method":"GET","path":"/public/index.html","status":200,"duration_ms":5}}
+{"ts":"2026-05-21T19:16:04.392Z","session":"20260521-191449","kind":"http_request","data":{"method":"GET","path":"/public/assets/main.css","status":200,"duration_ms":40}}
+{"ts":"2026-05-21T19:16:04.483Z","session":"20260521-191449","kind":"http_request","data":{"method":"GET","path":"/public/assets/img/start.jpg","status":200,"duration_ms":48}}
+{"ts":"2026-05-21T19:16:04.525Z","session":"20260521-191449","kind":"http_request","data":{"method":"GET","path":"/public/assets/main.js","status":200,"duration_ms":149}}
+{"ts":"2026-05-21T19:16:04.528Z","session":"20260521-191449","kind":"http_request","data":{"method":"GET","path":"/public/assets/img/logo.png","status":200,"duration_ms":41}}
+{"ts":"2026-05-21T19:16:04.813Z","session":"20260521-191449","kind":"ws_connect","data":{"client_id":"c1","url":"http://localhost:5500/public/index.html","user_agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:150.0) Gecko/20100101 Firefox/150.0","viewport":[1520,770]}}
+{"ts":"2026-05-21T19:16:04.854Z","session":"20260521-191449","kind":"http_request","data":{"method":"GET","path":"/public/assets/font/fontello.woff2","status":200,"duration_ms":22}}
+{"ts":"2026-05-21T19:16:04.870Z","session":"20260521-191449","kind":"ws_connect","data":{"client_id":"c2","url":"http://localhost:5500/","user_agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:150.0) Gecko/20100101 Firefox/150.0","viewport":[1520,770]}}
+{"ts":"2026-05-21T19:16:04.908Z","session":"20260521-191449","kind":"http_request","data":{"method":"GET","path":"/public/assets/img/favicon.ico","status":200,"duration_ms":24}}
+{"ts":"2026-05-21T19:16:04.911Z","session":"20260521-191449","kind":"http_request","data":{"method":"GET","path":"/public/sw.js","status":200,"duration_ms":67}}
+{"ts":"2026-05-21T19:16:05.039Z","session":"20260521-191449","kind":"console_log","data":{"level":"error","message":"Registration failed with SecurityError: The operation is insecure."}}
+{"ts":"2026-05-21T19:16:05.823Z","session":"20260521-191449","kind":"ws_disconnect","data":{"client_id":"c2"}}

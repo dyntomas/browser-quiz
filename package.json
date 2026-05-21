@@ -29,7 +29,6 @@
   },
   "dependencies": {
     "@trinodera/useful": "github:TriNodera/useful",
-    "@trinodera/view": "github:TriNodera/view",
     "cash-dom": "^8.1.5",
     "w3-css": "^4.1.0"
   }
