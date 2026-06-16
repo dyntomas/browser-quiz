@@ -6,6 +6,9 @@ const FileManagerPlugin = require('filemanager-webpack-plugin');
 const { GenerateSW } = require('workbox-webpack-plugin');
 const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 const TerserPlugin = require("terser-webpack-plugin");
+const { randomUUID } = require('crypto');
+
+const { name, version } = require('./package.json')
 
 const mode = process.env.NODE_ENV || "production";
 const config = {
@@ -39,7 +42,10 @@ const config = {
                             source: path.resolve(__dirname, "src/static"),
                             destination: path.resolve(__dirname, "public")
                         }
-                    ]
+                    ],
+                    // archive: [
+                    //     { source: 'public', destination: `dist/${name.split("/")[1]}-${version}.zip` }
+                    // ]
                 }
             }
         }),
@@ -54,15 +60,9 @@ const config = {
             swDest: "sw.js",
             runtimeCaching: [{
                 handler: "CacheFirst",
-                urlPattern: new RegExp("https://*.cdn.dyntomas.com/*"),
-                options: {
-                    cacheName: "cdn-cache"
-                }
-            }, {
-                handler: "CacheFirst",
                 urlPattern: new RegExp("/*"),
                 options: {
-                    cacheName: `app-${require("./package.json").version}`
+                    cacheName: `app-${version}-${randomUUID().split("-")[0]}`
                 }
             }],
             skipWaiting: true

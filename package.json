@@ -1,8 +1,8 @@
 {
   "name": "@dyntomas/browser-quiz",
   "display": "Browser Quiz",
-  "description": "",
-  "version": "1.2.2",
+  "description": "Browser logo quiz",
+  "version": "1.2.2-rc0",
   "private": true,
   "homepage": "https://browserquiz.dyntomas.com/",
   "main": "webpack.config.js",
@@ -21,11 +21,12 @@
     "css-loader": "^7.1.1",
     "css-minimizer-webpack-plugin": "^8.0.0",
     "filemanager-webpack-plugin": "^8.0.0",
-    "purgecss-webpack-plugin": "^7.0.2",
+    "glob": "^13.0.6",
     "mini-css-extract-plugin": "^2.9.0",
+    "purgecss-webpack-plugin": "^7.0.2",
     "terser-webpack-plugin": "^5.3.10",
-    "workbox-webpack-plugin": "^7.1.0",
-    "glob": "^13.0.6"
+    "webpack-cli": "^7.0.2",
+    "workbox-webpack-plugin": "^7.4.0"
   },
   "dependencies": {
     "@trinodera/useful": "github:TriNodera/useful",

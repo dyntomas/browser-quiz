@@ -28,5 +28,6 @@ export const config = [
     { "name": "Zen Browser", "image": "lWcrWkt6.png", "release": "Jul 7, 2024", "company": "Zen Browser", "source": "Open" },
     { "name": "ChatGPT Atlas", "image": "AYaofv4o.png", "release": "October 21, 2025", "company": "OpenAI", "source": "Closed" },
     { "name": "Comet", "image": "ryYhP6aV.png", "release": "July 9, 2025", "company": "Perplexity", "source": "Closed" },
-    { "name": "Helium", "image": "wNC24bkJ.png", "release": "Aug 18, 2025", "company": "InputNet", "source": "Open" }
+    { "name": "Helium", "image": "wNC24bkJ.png", "release": "Aug 18, 2025", "company": "InputNet", "source": "Open" },
+    { "name": "Servo", "image": "m9ZDMCy.png", "release": "May 21 2026", "company": "Linux Foundation Europe and volunteers", "source": "Open" }
 ]

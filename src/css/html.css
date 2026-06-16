@@ -1,8 +1,3 @@
-:root {
-    color-scheme: light only;
-    --max-width: 600px;
-}
-
 body {
     background: rgb(34, 193, 195);
     background: linear-gradient(90deg, rgba(34, 193, 195, 1) 0%, rgba(105, 165, 80, 1) 30%, rgba(190, 119, 149, 1) 50%, rgba(105, 165, 102, 1) 70%, rgba(34, 193, 195, 1) 100%);
@@ -11,69 +6,38 @@ body {
     user-select: none;
 }
 
-header {
+/* footer {
     text-align: center;
     background: #2322c9;
     background: linear-gradient(0deg, #2322c9 0, #8040d4 20%, #5d41a9 50%, #8040d4 80%, #2322c9 100%);
-    color: #fff;
-    padding: 2px;
-}
+    color: #fff
+} */
 
 footer {
     position: fixed;
     left: 0;
     bottom: 0;
+    width: 100%
 }
 
 a i {
     float: left
 }
 
-a {
-    text-decoration: none
-}
-
-button, h1, h2 {
+button,
+h1,
+h2,
+h3,
+h4 {
     font-family: calibri, "Trebuchet MS", sans-serif;
     color: azure
 }
 
-button {
-    font-size: 30px;
-    width: 90%;
-    margin-bottom: 10px;
-    animation: size 2s;
-    border-radius: 12px
-}
-
-button:hover {
+.view button:hover {
     rotate: 1.5deg;
     padding: 12px
 }
 
-/********************************************************/
-
-.padding {
-    padding-top: 16px !important;
-    padding-bottom: 16px !important
-}
-
-.w3-container {
-    padding: 0 30%;
-}
-
-img.logo {
-    width: 100%;
-    max-width: var(--max-width);
-    margin-bottom: 10px;
-}
-
-img.main {
-    width: 80%;
-    max-width: var(--max-width);
-    height: auto;
-}
-
-.hidden {
-    display: none;
+a {
+    text-decoration: none
 }

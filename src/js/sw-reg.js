@@ -1,5 +1,5 @@
-export default async () => {
-    if ("serviceWorker" in navigator) {
+(async () => {
+    if ("serviceWorker" in navigator && !location.href.startsWith("file://")) {
         try {
             const registration = await navigator.serviceWorker.register("sw.js", {
                 scope: "/",
@@ -13,4 +13,4 @@ export default async () => {
             console.error(`Registration failed with ${error}`);
         }
     }
-}
+})()
