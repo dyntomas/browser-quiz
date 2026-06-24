@@ -1,7 +1,11 @@
 import $ from "cash-dom";
-import { shuffleArray } from '@trinodera/useful';
 import { views, setView } from "./view";
 import { config } from "./config";
+
+function shuffleArray(arr) {
+    let arr2 = arr.sort(() => Math.random() - 0.5);
+    return arr2
+}
 
 (() => {
     const { version } = require('../../package.json');
@@ -96,14 +100,7 @@ import { config } from "./config";
         })
 
         /********************************/
-        /* Keyboard shortcut
-        /********************************/
-        // $(document).on("keyup", evt => {
-        //     evt.key == "Enter" && !btn2.prop("disabled") ? btn2.trigger('click') : "";
-        // });
-
-        /********************************/
-        /* Dtops dragging and right-click
+        /* Drop dragging and right-click
         /********************************/
         $('body').on('dragstart drop contextmenu', function (e) {
             e.preventDefault();

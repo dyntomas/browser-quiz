@@ -10,4 +10,4 @@
 - Removed `X-UA-Compatible` meta tag (Don't need it)
 - Replaced `Font Awesome` with `Fontello` (Less CSS bloat)
 - Config now in main code
-- Now includes images in project (was on a external domain)S
+- Now includes images in project (was on a external domain)

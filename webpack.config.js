@@ -6,7 +6,6 @@ const FileManagerPlugin = require('filemanager-webpack-plugin');
 const { GenerateSW } = require('workbox-webpack-plugin');
 const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 const TerserPlugin = require("terser-webpack-plugin");
-const { randomUUID } = require('crypto');
 
 const { name, version } = require('./package.json')
 
@@ -62,7 +61,7 @@ const config = {
                 handler: "CacheFirst",
                 urlPattern: new RegExp("/*"),
                 options: {
-                    cacheName: `app-${version}-${randomUUID().split("-")[0]}`
+                    cacheName: `app-${version}`
                 }
             }],
             skipWaiting: true

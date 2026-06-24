@@ -2,7 +2,7 @@
   "name": "@dyntomas/browser-quiz",
   "display": "Browser Quiz",
   "description": "Browser logo quiz",
-  "version": "1.2.2-rc0",
+  "version": "1.2.2",
   "private": true,
   "homepage": "https://browserquiz.dyntomas.com/",
   "main": "webpack.config.js",
@@ -29,7 +29,6 @@
     "workbox-webpack-plugin": "^7.4.0"
   },
   "dependencies": {
-    "@trinodera/useful": "github:TriNodera/useful",
     "cash-dom": "^8.1.5",
     "w3-css": "^4.1.0"
   }
